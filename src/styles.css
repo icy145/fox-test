@@ -8,11 +8,11 @@ div {
 }
 
 h1{
-    font-size: 40px;
+    font-size: 250%;
 }
 
 a{
-    font-size: 20px;
+    font-size: 120%;
 }
 
 .navbar-container {
@@ -82,6 +82,8 @@ a{
 }
 
 .main{
+    margin-left: auto;
+    margin-right: auto;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +91,6 @@ a{
     height:40rem;
     padding: 3.6rem 2.8rem;
     padding-left: 60px;
-    margin-left: 400px;
     background-color: rgba(201, 203, 206, 0.2);
     border-radius: 1rem;
     margin-top: 2rem;
