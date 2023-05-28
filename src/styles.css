@@ -39,6 +39,9 @@ a{
 }
  
 .button-container button {
+    position: relative;
+    left: 82rem;
+    top:5px;
     padding: 8px 16px;
     background-color: black;
     color: white;
@@ -116,7 +119,7 @@ a{
 input{
     border-width: 0;
     font-size: 30px;
-    width:70px;
+    width:250px;
 }
 
 .cypto-button{
@@ -137,6 +140,16 @@ input{
     width:35px;
     height:35px;
     margin-top: 3px;
+    position: relative;
+    left: 4 px;
+}
+
+.arrow-down-icon{
+    width: 25px;
+    height:25px;
+    position: relative;
+    bottom: 5px;
+    right: 5px;
 }
 
 p{
@@ -147,6 +160,8 @@ p{
 }
 
 .all-button{
+    position: -webkit-sticky;
+    display: flexbox;
     width: 200px;
     height: 40px;
     font-size: 20px;
