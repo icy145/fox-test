@@ -6,7 +6,7 @@ import goerliLogo from "../goerli.png"
 import warningIcon from "../warning-icon.png"
 import { useState } from "react"
 import usdcIcon from "../usdc-logo.webp"
-import arr from "./arrow.webp"
+import arr from "../arrow.webp"
 
 function Bridge(){
     const [Eth ,setEth] = useState(false);
@@ -70,69 +70,94 @@ function changeEth2(){
             <a>Send tokens between L1 Testnet and Fox Testnet.</a>
         </div>
         <div className="main">
-            <div className="sub">
-                <div className="small">
-                    <input text="userInput" placeholder="0.00"></input>  
-                    <div>
-                        {Eth ? 
-                        <div>
-                        <button onClick={changeEth} className="cypto-button">
-                            <img src={icon} alt="eth logo" className="eth-logo"></img> 
-                            <p>ETH</p>
-                        </button>
+        <div className="sub">
+          <div className="small">
+            <input text="userInput" placeholder="0.00"></input>
+            <div>
+              {Eth ? (
+                <div>
+                  <button onClick={changeEth} className="cypto-button">
+                    <img src={icon} alt="eth logo" className="eth-logo"></img>
+                    <p>ETH</p>
+                  </button>
 
-                        <button onClick={changeUsdc} className="cypto-button">
-                            <img src={usdcIcon} alt="eth logo" className="eth-logo"></img> 
-                            <p>USDC</p>
-                        </button>,
-                        </div> : 
-                    usdc ? <button onClick={changingState} className="cypto-button">
-                    <img src={icon} alt="eth logo" className="eth-logo"></img> 
-                    <p>ETH</p>
-                    <img src={arr} className="arrow-down-icon"></img>
-                    </button> : 
-                    <button onClick={changeBack} className="cypto-button">
-                            <img src={usdcIcon} alt="eth logo" className="eth-logo"></img> 
-                            <p>USDC</p>
-                        </button>}
-                    </div>
-                    <div>
-                    <button className="all-button">
-                    <img src={logo} alt="fox logo" className="fox-logo"></img> 
-                    <p className="text-fox">Fox Testnet</p>
-                    </button>
-                    </div>
+                  <button onClick={changeUsdc} className="cypto-button">
+                    <img
+                      src={usdcIcon}
+                      alt="eth logo"
+                      className="eth-logo"
+                    ></img>
+                    <p>USDC</p>
+                  </button>
                 </div>
+              ) : usdc ? (
+                <button onClick={changingState} className="cypto-button">
+                  <img src={icon} alt="eth logo" className="eth-logo"></img>
+                  <p>ETH</p>
+                  <img src={arr} className="arrow-down-icon"></img>
+                </button>
+              ) : (
+                <button onClick={changeBack} className="cypto-button">
+                  <img src={usdcIcon} alt="eth logo" className="eth-logo"></img>
+                  <p>USDC</p>
+                </button>
+              )}
             </div>
-        <img className="arrow" src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/01_arrow_down-512.png" alt="arrow"></img>
-            <div className="sub" style={{marginTop: "10px"}}> 
-                <div className="small">
-                    <input text="auto"></input>  
-                    <div>
-                        {
-                    usdc ? <button onClick={changingState2} className="cypto-button">
-                    <img src={icon} alt="eth logo" className="eth-logo"></img> 
-                    <p>ETH</p>
-                    </button> : 
-                    <button onClick={changeBack2} className="cypto-button">
-                            <img src={usdcIcon} alt="eth logo" className="eth-logo"></img> 
-                            <p>USDC</p>
-                        </button> }
-                    </div>
-                    <div>
-                    <button className="all-button">
-                    <img src={goerliLogo} alt="fox logo" className="goerli-logo"></img> 
-                    <p className="text-goerli">L1 Testnet</p>
-                    </button>
-                    </div>
-                </div>
+          </div>
+          <div className="position-absolute">
+            <button className="all-button">
+              <img src={logo} alt="fox logo" className="fox-logo"></img>
+              <p className="text-fox">Fox Testnet</p>
+            </button>
+          </div>
+        </div>
+        <img
+          className="arrow"
+          src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color/700/01_arrow_down-512.png"
+          alt="arrow"
+        ></img>
+        <div className="sub" style={{ marginTop: "10px" }}>
+          <div className="small">
+            <input text="auto"></input>
+            <div>
+              {usdc ? (
+                <button onClick={changingState2} className="cypto-button">
+                  <img src={icon} alt="eth logo" className="eth-logo"></img>
+                  <p>ETH</p>
+                </button>
+              ) : (
+                <button onClick={changeBack2} className="cypto-button">
+                  <img src={usdcIcon} alt="eth logo" className="eth-logo"></img>
+                  <p>USDC</p>
+                </button>
+              )}
             </div>
-            <br></br>
+            <div>
+              <button className="all-button">
+                <img
+                  src={goerliLogo}
+                  alt="fox logo"
+                  className="goerli-logo"
+                ></img>
+                <p className="text-goerli">L1 Testnet</p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <br></br>
         <h2>Fees</h2>
         <button className="wallet-button-2">
-            <img src={warningIcon} alt="warningIcon" className="warning-icon"></img>
-            Click here to connect wallet</button>
-        <button onClick={consolelogging} className="transfer-button">Send ETH to Fox Textnet</button>
+          <img
+            src={warningIcon}
+            alt="warningIcon"
+            className="warning-icon"
+          ></img>
+          Click here to connect wallet
+        </button>
+        <button onClick={consolelogging} className="transfer-button">
+          Send ETH to Fox Textnet
+        </button>
+
         </div>
     </div>
     );
